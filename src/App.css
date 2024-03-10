@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -14,7 +15,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   /* flex-direction: column;
@@ -25,18 +25,19 @@
 }
 
 .drag-n-drop {
-  padding: .5rem;
+  padding: 0.5rem;
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
   width: 100%;
   height: 100%;
   grid-template-columns: repeat(auto-fill, 300px);
   align-items: start;
+  justify-content: space-between;
 }
 .dnd-group {
   background-color: #49505e;
   border-radius: 5px;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 .dnd-item {
   display: flex;
@@ -49,15 +50,15 @@
   font-weight: bold;
 }
 .dnd-item:not(:last-of-type) {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-.dnd-item * {  
+.dnd-item * {
   margin: 0;
   font-size: 1.2rem;
 }
 .group-title {
   text-align: left;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
 .current {
@@ -75,4 +76,125 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h2 {
+  margin: 0;
+  /* padding-top: 20px; */
+  color: white;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.btn {
+  outline: none;
+  border: 0;
+  background-color: #49505e;
+  padding: 8px 20px;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+header .btn:hover {
+  transform: scale(1.05);
+  background-color: #49505e;
+}
+
+main {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.ReactModal__Content {
+  background-color: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #49505e;
+  border: 0;
+  border-radius: 4px;
+  padding: 20px;
+  position: relative;
+}
+
+.task-form h3 {
+  color: white;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.task-form .form-pattern {
+  margin: 20px 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* gap: 12px; */
+  margin-bottom: 0;
+}
+
+input,
+select {
+  width: 96%;
+  outline: none;
+  border: 0;
+  background-color: white;
+  color: #49505e;
+  border-radius: 4px;
+  padding: 10px 2%;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.react-datepicker-wrapper input {
+  margin-bottom: 0;
+}
+
+.task-form select {
+  width: 100%;
+}
+
+.task-form .btn {
+  color: #49505e;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.task-form .head img{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  color: white;
 }
